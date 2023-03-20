@@ -1,7 +1,7 @@
 import random
 star_line = "*****************************"
 
-secret_number = round(int(random.random() * 100))
+secret_number = random.randrange(1, 101)
 total_tries = 3
 
 print(star_line + "\n" + "Welcome to the guessing game!" + "\n" + star_line)
