@@ -1,6 +1,7 @@
+import random
 star_line = "*****************************"
 
-secret_number = 77
+secret_number = round(int(random.random() * 100))
 total_tries = 3
 
 print(star_line)
@@ -22,11 +23,11 @@ for current_try in range(1, total_tries + 1):
         print("\n You guessed correctly!")
         break
     else:
-        if user_guess > secret_number:
+        if secret_number > user_guess :
             print("\n Wrong guess: value is higher.")
         else:
             print("\n Wrong guess: value is lower.")
 
 print(star_line)
-print("Game Over.")
+print("Game Over. Number was {}".format(secret_number))
 print(star_line)
