@@ -4,9 +4,7 @@ star_line = "*****************************"
 secret_number = round(int(random.random() * 100))
 total_tries = 3
 
-print(star_line)
-print("Welcome to the guessing game!")
-print(star_line)
+print(star_line + "\n" + "Welcome to the guessing game!" + "\n" + star_line)
 
 for current_try in range(1, total_tries + 1):
     print("\n Try {} out of {}".format(current_try, total_tries))
@@ -23,11 +21,9 @@ for current_try in range(1, total_tries + 1):
         print("\n You guessed correctly!")
         break
     else:
-        if secret_number > user_guess :
+        if secret_number > user_guess:
             print("\n Wrong guess: value is higher.")
         else:
             print("\n Wrong guess: value is lower.")
 
-print(star_line)
-print("Game Over. Number was {}".format(secret_number))
-print(star_line)
+print(star_line + "\n" + "Game Over. Number was {}".format(secret_number) + "\n" + star_line)
